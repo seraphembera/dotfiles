@@ -1,8 +1,8 @@
 # my configure
 
 # set LANG
-export LANG=zh_CN.UTF-8
-export LANGUAGE=zh_CN:en_US
+# export LANG=zh_CN.UTF-8
+# export LANGUAGE=zh_CN:en_US
 
 # start i3
 exec i3

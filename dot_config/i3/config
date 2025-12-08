@@ -158,7 +158,17 @@ bindsym $mod+r mode "resize"
 #}
 
 # set border pixel 0
-for_window[class="^.*"]border pixel 1
+for_window[class="^.*"]border pixel 0
+# 窗口之间10像素间隙
+gaps inner 10
+# 窗口与屏幕边缘5像素间隙
+gaps outer 5
+# for_window 匹配Polybar窗口，设置其间隙为0
+for_window [class="Polybar"] gaps outer 0
+for_window [class="Polybar"] floating enable
+for_window [class="Polybar"] resize set 100 ppt 100 ppt
+# 智能间隙（仅多个窗口时显示间隙）
+smart_gaps on
 # start picom
 exec --no-startup-id picom
 # start feh
