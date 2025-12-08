@@ -164,7 +164,7 @@ exec --no-startup-id picom
 # start feh
 exec --no-startup-id feh --bg-fill /home/seraphembera/picture/08.jpg
 # start polybar
-exec --no-startup-id polybar $HOME/.config/polybar/launch.sh
+exec --no-startup-id /home/seraphembera/.config/polybar/launch.sh
 # start ulauncher
 exec --no-startup-id ulauncher --hide-window
 # start fcitx5
