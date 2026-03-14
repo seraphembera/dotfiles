@@ -1,0 +1,74 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 4,
+    "height": 40,
+    "modules-left": [
+        "custom/logo",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "memory",
+        "cpu",
+        "network"
+    ],
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "urgent": "󱓻"
+        },
+        "persistent-workspaces": {}
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "󰘚 {usage}%",
+        "tooltip": true,
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 5,
+        "format": "󰍛 {}%",
+        "tooltip-format": "RAM: {used:0.1f}G / {total:0.1f}G",
+        "max-length": 10
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>",
+        "format-alt": " {:%a, %d %b %Y}",
+        "format": " {:%H:%M}",
+        "interval": 1
+    },
+    "network": {
+        "format-wifi": "{icon} {essid}",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "format-ethernet": "󰀂 {ifname}",
+        "format-alt": "{icon} {signalStrength}%",
+        "format-disconnected": "󰖪 Offline",
+        "tooltip-format-wifi": "{icon} {essid} ({signalStrength}%)\n{ifname}\n⇣ {bandwidthDownBytes}  ⇡ {bandwidthUpBytes}",
+        "tooltip-format-ethernet": "󰀂 {ifname}\n⇣ {bandwidthDownBytes}  ⇡ {bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "interval": 5,
+        "on-click-right": "nm-connection-editor"
+    },
+    "custom/logo": {
+        "format": "  ",
+        "tooltip": false
+    }
+}

@@ -1,7 +1,7 @@
 # 安装zsh
 ``` bash
 sudo pacman -S zsh
-chsh -s /bin/zsh # 将Zsh设置为默认shell
+chsh -s $(which zsh) # 将Zsh设置为默认shell
 ```
 > [!TIP]
 > 使用`cat /etc/shells`查看系统可以用的`shell`

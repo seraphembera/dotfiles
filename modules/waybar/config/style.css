@@ -1,0 +1,108 @@
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+}
+
+window#waybar {
+  background-color: transparent;
+  border: none;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/* 工作区 - 极简透明 */
+#workspaces {
+  background-color: transparent;
+  margin: 4px 4px;
+}
+
+#workspaces button {
+  all: initial;
+  min-width: 20px;
+  padding: 4px 8px;
+  margin: 0 2px;
+  color: rgba(205, 214, 244, 0.4);
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+  color: rgba(205, 214, 244, 0.9);
+  border-bottom: 2px solid rgba(205, 214, 244, 0.6);
+}
+
+#workspaces button:hover {
+  background-color: rgba(205, 214, 244, 0.1);
+  color: rgba(205, 214, 244, 0.8);
+}
+
+#workspaces button.urgent {
+  color: rgba(243, 139, 168, 0.9);
+  border-bottom: 2px solid rgba(243, 139, 168, 0.6);
+}
+
+/* 右侧模块统一透明风格 */
+#memory,
+#cpu,
+#battery,
+#network,
+#clock,
+#tray,
+#custom-logo {
+  background-color: rgba(30, 30, 46, 0.3);
+  color: rgba(205, 214, 244, 0.7);
+  padding: 4px 10px;
+  margin: 4px 2px;
+  border: 1px solid rgba(205, 214, 244, 0.1);
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+/* 悬停效果 */
+#memory:hover,
+#cpu:hover,
+#battery:hover,
+#network:hover,
+#clock:hover,
+#tray:hover {
+  background-color: rgba(30, 30, 46, 0.5);
+  color: rgba(205, 214, 244, 0.9);
+}
+
+#custom-logo {
+  margin-left: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: rgba(23, 147, 209, 0.8);
+  border: 1px solid rgba(23, 147, 209, 0.2);
+}
+
+#cpu.high {
+  color: rgba(243, 139, 168, 0.9);
+  border-bottom: 2px solid rgba(243, 139, 168, 0.5);
+}
+
+@keyframes blink {
+  50% { opacity: 0.5; }
+}
+
+/* Tooltip */
+tooltip {
+  background-color: rgba(19, 24, 34, 0.85);
+  border: 1px solid rgba(205, 214, 244, 0.1);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+tooltip label {
+  color: rgba(205, 214, 244, 0.9);
+  padding: 4px;
+}
