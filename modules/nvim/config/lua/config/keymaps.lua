@@ -5,3 +5,6 @@ map("i", "jk", "<Esc>", { desc = "Exit insert mode" })
 -- Shift+j/k 跳跃 5 行
 map("n", "<S-j>", "5j", { desc = "Jump 5 lines down" })
 map("n", "<S-k>", "5k", { desc = "Jump 5 lines up" })
+map("v", "<S-j>", "5j", { desc = "Jump 5 lines down" })
+map("v", "<S-k>", "5k", { desc = "Jump 5 lines up" })
+
