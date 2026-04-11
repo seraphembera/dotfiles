@@ -1,0 +1,7 @@
+# docker配置代理
+在`/etc/systemd/system/multi-user.target.wants/docker.service`文件中的`[service]`中添加以下内容：
+```
+Environment="HTTP_PROXY=http://127.0.0.1:7897"
+Environment="HTTPS_PROXY=http://127.0.0.1:7897"
+Environment="NO_PROXY=localhost,127.0.0.1"
+```
